@@ -1,0 +1,221 @@
+:root {
+    --bs-body-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --bs-body-color: #1e293b;
+    --bs-body-bg: #fffdf7; /* Light vanilla cream background */
+    --card-border: #e8d9c2; /* Warm beige border */
+    --subtle-bg: #fffbf0; /* Vanilla cream subtle bg */
+    --muted-color: #5c4d3a; /* Warm brown for muted text */
+    --accent-color: rgba(245, 230, 204, 0.59); /* Vanilla cream accent */
+    --primary-color: #d4a373; /* Earthy primary for buttons, etc. */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--bs-body-font-family);
+    color: var(--bs-body-color);
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+    background: var(--bs-body-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+.navbar {
+    background: rgba(255, 253, 247, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--card-border);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.nav-link {
+    color: var(--muted-color);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #0f172a;
+}
+
+.card {
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s, transform 0.2s;
+    background: linear-gradient(to bottom, #ffffff, #fffdf7);}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px); /* Slight lift for interest */
+}
+
+.hero-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+
+#hero-focus {
+    font-weight: 600;
+}
+
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.75em;
+}
+
+.project-scroll {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.project-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.project-scroll::-webkit-scrollbar-thumb {
+    background: #d4a373; /* Earthy thumb for interest */
+    border-radius: 3px;
+}
+
+.project-card {
+    flex: 0 0 320px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 0.5rem;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: var(--subtle-bg);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--card-border);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.75rem;
+    top: 0.5rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d4a373;
+    border: 2px solid var(--bs-body-bg);
+}
+
+.skill-pill {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--accent-color);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #475569;
+}
+
+footer {
+    background: var(--subtle-bg);
+    border-top: 1px solid var(--card-border);
+}
+
+.text-muted-custom {
+    color: var(--muted-color);
+}
+
+.bg-subtle {
+    background: var(--subtle-bg);
+}
+
+.copyable {
+    cursor: pointer;
+}
+
+.copyable:hover {
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 0 0 280px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .timeline {
+        padding-left: 1.5rem;
+    }
+}

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Components & Dynamic Features</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- Navbar (simple for this page) -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Back to Portfolio</a>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<section class="py-5">
+    <div class="container">
+        <h1 class="mb-4">Bootstrap Components & Dynamic Features Used</h1>
+        <p class="mb-5">This page provides a detailed breakdown of the Bootstrap 5.3.3 components integrated into the portfolio website, including their usage locations and purposes. It also covers custom dynamic features implemented with JavaScript for enhanced interactivity.</p>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Bootstrap Components Breakdown</h5>
+                        <div class="accordion" id="bootstrapAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingNavbar">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar" aria-expanded="true" aria-controls="collapseNavbar">
+                                        Navbar
+                                    </button>
+                                </h2>
+                                <div id="collapseNavbar" class="accordion-collapse collapse show" aria-labelledby="headingNavbar">
+                                    <div class="accordion-body">
+                                        <p><strong>Description:</strong> A responsive, sticky-top navigation bar with collapse functionality for mobile views.</p>
+                                        <p><strong>Usage:</strong> Main navigation at the top of the page, including links to sections like About, Education, etc., and a separate Features link. Includes a search button for demonstration.</p>
+                                        <p><strong>Key Features:</strong> Sticky positioning, toggler icon, and responsive collapse.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCards">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCards" aria-expanded="false" aria-controls="collapseCards">
+                                        Cards
+                                    </button>
+                                </h2>
+                                <div id="collapseCards" class="accordion-collapse collapse" aria-labelledby="headingCards">
+                                    <div class="accordion-body">
+                                        <p><strong>Description:</strong> Flexible content containers with borders, shadows, and hover effects.</p>
+                                        <p><strong>Usage:</strong> Used in Education (for degree details), Projects (for individual project cards in a horizontal scroll), Experience (for intern and additional experience), Skills (for skill categories), Hobbies (for interests list), and Contact (for the form container).</p>
+                                        <p><strong>Key Features:</strong> Custom hover shadow, flex layout in project cards for consistent height.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingBadges">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBadges" aria-expanded="false" aria-controls="collapseBadges">
+                                        Badges
+                                    </button>
+                                </h2>
+                                <div id="collapseBadges" class="accordion-collapse collapse" aria-labelledby="headingBadges">
+                                    <div class="accordion-body">
+                                        <p><strong>Description:</strong> Small count and labeling components.</p>
+                                        <p><strong>Usage:</strong> In Hero (status badges like Fourth Year), Projects (year badges and tech tags), Education (module grades), Experience (tech badges).</p>
+                                        <p><strong>Key Features:</strong> Colored variants (primary, secondary, etc.) for categorization.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingButtons">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseButtons" aria-expanded="false" aria-controls="collapseButtons">
+                                        Buttons
+                                    </button>
+                                </h2>
+                                <div id="collapseButtons" class="accordion-collapse collapse" aria-labelledby="headingButtons">
+                                    <div class="accordion-body">
+                                        <p><strong>Description:</strong> Standard and outline buttons for actions.</p>
+                                        <p><strong>Usage:</strong> Hero (View Projects, Get in Touch), Projects (View Details toggles), Experience (Show Responsibilities toggle), Contact (Send Message), Footer (Back to Top).</p>
+                                        <p><strong>Key Features:</strong> Primary and outline variants, full-width on small screens, ARIA attributes for accessibility.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCollapse">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCollapse" aria-expanded="false" aria-controls="collapseCollapse">
+                                        Collapse
+                                    </button>
+                                </h2>
+                                <div id="collapseCollapse" class="accordion-collapse collapse" aria-labelledby="headingCollapse">
+                                    <div class="accordion-body">
+                                        <p><strong>Description:</strong> Toggle visibility of content sections.</p>
+                                        <p><strong>Usage:</strong> Projects (details for each project), Experience (responsibilities list).</p>
+                                        <p><strong>Key Features:</strong> Triggered by buttons with data-bs-toggle, ARIA controls for screen readers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingModal">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseModal" aria-expanded="false" aria-controls="collapseModal">
+                                        Modal
+                                    </button>
+                                </h2>
+                                <div id="collapseModal" class="accordion-collapse collapse" aria-labelledby="headingModal">
+                                    <div class="accordion-body">
+                                        <p><strong>Description:</strong> Dialog popup for additional content.</p>
+                                        <p><strong>Usage:</strong> Hero and Modal footer (Contact Information popup).</p>
+                                        <p><strong>Key Features:</strong> Centered dialog, fade animation, close button with ARIA label.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingForm">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">
+                                        Form
+                                    </button>
+                                </h2>
+                                <div id="collapseForm" class="accordion-collapse collapse" aria-labelledby="headingForm">
+                                    <div class="accordion-body">
+                                        <p><strong>Description:</strong> Input groups and validation styles.</p>
+                                        <p><strong>Usage:</strong> Contact section (name, email, subject, message fields).</p>
+                                        <p><strong>Key Features:</strong> Labels, required attributes, grid layout for responsiveness, ARIA required for accessibility.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingListGroup">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseListGroup" aria-expanded="false" aria-controls="collapseListGroup">
+                                        List Group
+                                    </button>
+                                </h2>
+                                <div id="collapseListGroup" class="accordion-collapse collapse" aria-labelledby="headingListGroup">
+                                    <div class="accordion-body">
+                                        <p><strong>Description:</strong> Flexible series of content items.</p>
+                                        <p><strong>Usage:</strong> Education (module grades), Skills (achievements list).</p>
+                                        <p><strong>Key Features:</strong> Flush variant, flex layout with badges.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Dynamic Features (JavaScript)</h5>
+                        <div class="accordion" id="jsAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTextRotator">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTextRotator" aria-expanded="true" aria-controls="collapseTextRotator">
+                                        Text Rotator
+                                    </button>
+                                </h2>
+                                <div id="collapseTextRotator" class="accordion-collapse collapse show" aria-labelledby="headingTextRotator">
+                                    <div class="accordion-body">
+                                        <p><strong>Description:</strong> Cycles through a list of focus topics in the hero section.</p>
+                                        <p><strong>Implementation:</strong> Uses setInterval to update the text content every 3.2 seconds. Topics include 'Blazor WebAssembly on Azure', 'Bootstrap-driven UI systems', etc.</p>
+                                        <p><strong>Purpose:</strong> Adds dynamic emphasis to key skills without overwhelming the user.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingEmailCopy">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEmailCopy" aria-expanded="false" aria-controls="collapseEmailCopy">
+                                        Email Copy
+                                    </button>
+                                </h2>
+                                <div id="collapseEmailCopy" class="accordion-collapse collapse" aria-labelledby="headingEmailCopy">
+                                    <div class="accordion-body">
+                                        <p><strong>Description:</strong> Allows users to copy the email address with a click.</p>
+                                        <p><strong>Implementation:</strong> Uses navigator.clipboard.writeText in an onclick handler, with a success alert. Applied to email elements in Contact section and Modal.</p>
+                                        <p><strong>Purpose:</strong> Improves user experience by simplifying contact actions, with cursor:pointer and hover underline for affordance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingNotes">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNotes" aria-expanded="false" aria-controls="collapseNotes">
+                                        Additional Notes
+                                    </button>
+                                </h2>
+                                <div id="collapseNotes" class="accordion-collapse collapse" aria-labelledby="headingNotes">
+                                    <div class="accordion-body">
+                                        <p>All other interactivity (e.g., collapses, modal, navbar toggle) is handled by Bootstrap's built-in JavaScript. Custom JS is kept minimal in assets/js/app.js, focusing on the rotator and copy utility. No external libraries beyond Bootstrap are used for dynamics.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
